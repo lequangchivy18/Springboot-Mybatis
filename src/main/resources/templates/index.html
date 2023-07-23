@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<title>Enums in Thymeleaf</title>
 </head>
 <body>
- <h1>Hello</h1>
+    <h2 >Hello from 'templates/templates-2'</h2>
+    <th:block th:each="user, iState : ${users}">
+       <p th:utext="${user.username}"></p>
+	</th:block>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package com.study.springboot_mybatis;
+package com.study.mybatis;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
