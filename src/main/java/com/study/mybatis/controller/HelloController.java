@@ -20,6 +20,7 @@ public class HelloController {
 	public String hello(Model model) {
 		
 		List<User> users = userService.findAllUser();
+		System.out.println(users.toString());
 		model.addAttribute("users", users);
 		
 		return "index";
