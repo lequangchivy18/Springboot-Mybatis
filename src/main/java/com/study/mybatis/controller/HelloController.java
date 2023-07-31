@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import com.study.mybatis.model.User;
 import com.study.mybatis.service.UserService;
 
-@Controller("/springboot_mybatis")
+@Controller
 public class HelloController {
 	
 	@Autowired
@@ -20,7 +20,6 @@ public class HelloController {
 	public String hello(Model model) {
 		
 		List<User> users = userService.findAllUser();
-		System.out.println(users.toString());
 		model.addAttribute("users", users);
 		
 		return "index";
