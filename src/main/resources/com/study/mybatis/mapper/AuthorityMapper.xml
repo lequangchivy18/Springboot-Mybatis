@@ -3,8 +3,17 @@
 
 <mapper namespace="com.study.mybatis.mapper.AuthorityMapper">
 
-    <insert id="insertAuthority">
-        INSERT INTO Authority (authorityName) VALUES (#{authorityName})
-    </insert>
+	<insert id="insertAuthority">
+		INSERT INTO Authority (authorityName) VALUES (#{authorityName})
+	</insert>
+
+	<select id="findAllAuthority" resultMap="result">
+		SELECT * FROM Authority;
+	</select>
+
+	<resultMap id="result" type="Authority">
+		<result property="authorityId" column="authorityId" />
+		<result property="authorityName" column="authorityName" />
+	</resultMap>
 
 </mapper>
